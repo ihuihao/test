@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 4, 2, 90, 200, 20, 23, 3, 10, 50, 60]
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - 1 - i; j++)
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+        }
+        console.log(arr);
+        function factorial(n) {
+            if (n <= 1) {
+                return 1;
+            }
+            for (var result = 1; n > 1; n--) {
+                result = n * result;
+            }
+            return result;
+        }
+        console.log(factorial(5)); // 输出 120  
+        console.log(factorial(6)); // 输出 720  
+        console.log(factorial(0)); // 输出 1  
+        console.log(factorial(1)); // 输出 1
+
+    </script>
+</body>
+
+</html>
